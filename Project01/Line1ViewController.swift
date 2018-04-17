@@ -35,7 +35,6 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
     // 6 - "한강진역", "이태원역", "월드컵경기장역", "불광역", "연신내역"
     // 7 - "어린이대공원역", "청담역", "뚝섬유원지역", "상도역", "보라매역"
     // 8 - "가락시장역", "모란역", "장지역"
-    
     // 9 - "구반포역", "샛강역", "선유도역"
     
     
@@ -51,30 +50,51 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
         
         if self.title == "1호선" {
             playListLabel.text = "청량리역 \n종로5가역 \n종각역 \n시청역 \n영등포역"
+            playListLabel.backgroundColor = UIColor.blue
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "2호선" {
             playListLabel.text = "합정역 \n잠실나루역 \n잠실역 \n삼성역 \n방배역"
+            playListLabel.backgroundColor = UIColor(red: 0.0627, green: 0.7882, blue: 0, alpha: 1.0) //yellow green
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "3호선" {
             playListLabel.text = "경복궁역 \n안국역 \n신사역 \n남부터미널역 \n고속터미널역"
+            //playListLabel.backgroundColor = UIColor.orange
+            playListLabel.backgroundColor = UIColor(red: 0.9686, green: 0.6275, blue: 0, alpha: 1.0)
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "4호선" {
             playListLabel.text = "헤화역 \n충무로역 \n회현역 \n이촌역 \n동작역"
+            playListLabel.backgroundColor = UIColor(red: 0, green: 0.6588, blue: 0.9176, alpha: 1.0) //skyblue
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "5호선" {
             playListLabel.text = "올림픽공원역 \n광화문역 \n광나루역 \n여의나루역 \n여의도역"
+            //playListLabel.backgroundColor = UIColor.purple
+            playListLabel.backgroundColor = UIColor(red: 0.5882, green: 0, blue: 0.9294, alpha: 1.0)
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "6호선" {
             playListLabel.text = "한강진역 \n이태원역 \n월드컵경기장역 \n불광역"
+            playListLabel.backgroundColor = UIColor.brown
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "7호선" {
             playListLabel.text = "어린이대공원역 \n청담역 \n뚝섬유원지역 \n상도역 \n보라매역"
+            playListLabel.backgroundColor = UIColor(red: 0, green: 0.4667, blue: 0.1451, alpha: 1.0) //dark green
+            
+            playListLabel.textColor = UIColor.white
         }
         else if self.title == "8호선" {
             playListLabel.text = "가락시장역 \n모란역 \n장지역"
+            playListLabel.backgroundColor = UIColor(red: 0.9176, green: 0, blue: 0.902, alpha: 1.0) //pink
+            playListLabel.textColor = UIColor.white
         }
         else {
             playListLabel.text = "구반포역 \n샛강역 \n선유도역"
+            playListLabel.backgroundColor = UIColor(red: 0.4588, green: 0.4039, blue: 0, alpha: 1.0) //dark brown
+            playListLabel.textColor = UIColor.white
         }
         
     }
@@ -96,6 +116,10 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
         
         //playListLabel.text = "청량리역 \n종로5가역 \n종각역 \n시청역 \n영등포역"
         if self.title == "1호선" {
+            
+            //playListLabel.backgroundColor = UIColor.blue
+            //playListLabel.textColor = UIColor.white
+            
             if storeValue == "청량리역" {
                 printLabel.text = "홍릉수목원! \n서울 유일의 정통수목원입니다~!"
                 wayLabel.text = "역에서 하차 - [간선]201(현대코아) 승차 - 세종대왕기념관 정류장에서 하차 - 2분 걷기 (대중교통 13분)"
@@ -115,6 +139,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
             else if storeValue == "영등포역" {
                 printLabel.text = "타임스퀘어! \n대한민국 No.1 복합쇼핑몰 타임스퀘어~! 도시적인 공간과 친근한 자연 공간이 어우러진 라이프스타일 센터"
                 wayLabel.text = "3번 출구로 나온 후 - 신세계백화점영등포점까지 걸어가서 - 왼쪽으로 (도보 6분)"
+            }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
             }
             
         }
@@ -141,6 +168,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
                 printLabel.text = "서리풀공원 / 몽마르뜨 공원! \n 산책을 위해 [방배역 - 서리풀공원 – 몽마르뜨공원] 코스로 많이 걷는다고 합니다"
                 wayLabel.text = "4번 출구로 나온 후 - ‘뮤랑’ 앞 횡단보도 이용 – 오른쪽 방향으로 이동 – 도착 (도보 5분)"
             }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
+            }
         }
         
         //playListLabel.text = "경복궁역 \n안국역 \n신사역 \n남부터미널역 \n고속터미널역"
@@ -164,6 +194,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
             else if storeValue == "고속터미널역" {
                 printLabel.text = "서래마을! \n브런치로 유명한 곳이기도 하며, 그 중에서도 ‘스토브’와 ‘더페이지’를 추천해드립니다. 가격도 괜찮고 퀄리티도 굿~"
                 wayLabel.text = "5번 출구로 나온 후 – 횡단보도까지 약 10m 이동 - COFFEEOLOGY 방면으로 횡단 – 약 500m 걸어서 ‘서래본가’ 앞에서 왼쪽 방향으로 – 260m 걸어서 도착 (도보 20분)"
+            }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
             }
         }
             
@@ -189,6 +222,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
                 printLabel.text = "국립 서울 현충원! 매년 수양벚꽃 축제가 열리는 곳입니다~\n현충원은 국가와 민족을 위해 목숨을 바친 영령들이 안장되어 있는 국립묘지인데요 많은 호국 영령의 묘지 뿐만 아니라 여러 조형, 휴게 시설들이 마련되어 있답니다."
                 wayLabel.text = "8번 출구로 나온 후 – 국립서울현충원까지 약 50m 걷기 – 도착 (도보 9분)"
             }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
+            }
         }
         
         //playListLabel.text = "올림픽공원역 \n광화문역 \n광나루역 \n여의나루역 \n여의도역"
@@ -213,6 +249,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
                 printLabel.text = "여의도 공원! \n매년, 벚꽃 축제의 메카인 이 곳은, 축제 기간에 차량이 모두 통제된다고 합니다. 27년간 검은 아스팔트로 뒤덮여 있던 여의도 광장이 숲과 잔디, 물이 어우러진 도심공원으로 새롭게 태어난 곳이라고 합니다."
                 wayLabel.text = "3번 출구로 나온 후 – 한화손해보험빌딩 앞 횡단보도까지 1개의 횡단보도를 지나 – 약 250m 걸어서 2개의 횡단보도 이용 – 약 50m 걷기 – 도착 (도보 7분)"
             }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
+            }
         }
         
         //playListLabel.text = "한강진역 \n이태원역 \n월드컵경기장역 \n불광역 \n연신내역"
@@ -232,6 +271,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
             else if storeValue == "불광역" {
                 printLabel.text = "불광천! \n서울의 대표 나들이 장소 불광천은 사시사철 구민들 및 다양한 지역 사람들에게 사랑받는 산책로이며, 벚꽃축제도 열린다고 합니다."
                 wayLabel.text = "역에서 나온 후 – 양광교회 정류장까지 약 5분 걷기 – 7022(양광교회) 버스 승차 후 – 응암역신사오거리 정류장에서 하차 – 불광천까지 약 7분 걷기 – 도착 (대중교통 23분)"
+            }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
             }
             
         }
@@ -258,6 +300,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
                 printLabel.text = "보라매 공원! \n한 바퀴 쭉 돌면서 산책하기에 제격인 곳이랍니다."
                 wayLabel.text = "3번 출구로 나온 후 – 계경순대국보라매역점 앞 횡단보도까지 약 100m 걷기 – 은석장로교회까지 약 150m 걷기 – 기상청입구까지 약 100m 걷기 – 왼쪽 방향으로 이동 – 도착 (도보 12분)"
             }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
+            }
         }
         
         //playListLabel.text = "가락시장역 \n모란역 \n장지역"
@@ -273,6 +318,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
             else if storeValue == "장지역" {
                 printLabel.text = "가든파이브! \n한국 물류의 허브가 될 garden5는 고객의 오감을 만족시키는 복합생활공간 이라는 뜻으로, 가든파이브 라이프, 가든파이브 웍스 등의 다섯가지로 이루어져 있어 garden5라 부른다 합니다."
                 wayLabel.text = "3번 출구로 나온 후 – 약 80m 이동 – 도착 (도보 2분)"
+            }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
             }
             
         }
@@ -290,6 +338,9 @@ class Line1ViewController: UIViewController, UITextFieldDelegate {
             else if storeValue == "선유도역" {
                 printLabel.text = "선유도 공원! \n조명공사로 더 이뻐졌다고 하네요 한번 가보실래요?"
                 wayLabel.text = "4번 출구로 나온 후 – KB국민은행 양평동지점 앞에서 왼쪽 방향으로 – 약 70m 이동 후 코코모터스 앞 횡단보도 – 약 250m 걸어서 이동 – 도착 (도보 18분)"
+            }
+            else {
+                printLabel.text = "핫플레이스를 알고 싶은 역 이름을 다시 검색해주세요 \n 역 입력 후 Done 버튼을 통해 입력을 완료해주세요."
             }
             
         }
